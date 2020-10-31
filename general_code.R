@@ -5,19 +5,18 @@ library(stringdist)
 library(stringr)
 
 ### SET PARAMETERS ###
+# input files directory
+left_file <- read.csv("~/Desktop/master1930.csv", fileEncoding="latin1")
+right_file <- read.csv("~/Desktop/using1930.csv", fileEncoding="latin1")
+individual_links <- read.csv("~/Desktop/individual_links.csv")
+
 # output directory
-output_directory = "~/Desktop/thesis/final code/general code/outputtttt.csv"
+output_directory = "~/Desktop/output.csv"
 
 # specify the census data 
 # the left should be the left column in individual links file and right should be the right column
 leftname = "master1930"
 rightname = "ICR"
-
-# input files directory
-left_file <- read.csv("~/Desktop/thesis/final code/general code/master1930.csv", fileEncoding="latin1")
-right_file <- read.csv("~/Desktop/thesis/final code/general code/using1930.csv", fileEncoding="latin1")
-individual_links <- read.csv("~/Desktop/thesis/final code/general code/individual_links.csv")
-
 
 blocking = c("sex","metastate")
 
@@ -29,7 +28,6 @@ requirements = 2
 percent_match = 0.25
 
 lowest_similarity = 0.75
-
 
 ### PARAMETERS END ###
 
